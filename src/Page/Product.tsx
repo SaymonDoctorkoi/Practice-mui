@@ -38,7 +38,7 @@ const Product = () => {
   };
   useEffect(() => {
     retrievePosts();
-  }, [10]);
+  }, []);
   // const {
   //   data: post,
   //   error,

@@ -13,10 +13,10 @@ interface UserDetails {
   isExtend?: boolean;
 }
 
-interface VisitTime {
-  fromTime: string;
-  toTime: string;
-}
+// interface VisitTime {
+//   fromTime: string;
+//   toTime: string;
+// }
 
 interface VisitFee {
   old: string;
@@ -88,7 +88,7 @@ const Profile = () => {
             }}
           >
             {userInfo?.basicInfo?.details?.map(
-              (field, index) => (
+              (field: UserDetails, index) => (
                 console.log(field),
                 (
                   <Grid
@@ -121,17 +121,17 @@ const Profile = () => {
                           {/* Render content for extended details */}
                           {field.label === "Visiting Hour" ? (
                             <div>
-                              {field.value.map(
+                              {/* {field.value.map(
                                 (timeSlot: VisitTime, i: number) => (
                                   <Typography key={i}>
                                     {`${timeSlot.fromTime} to ${timeSlot.toTime}`}
                                   </Typography>
                                 )
-                              )}
+                              )} */}
                             </div>
                           ) : (
                             <Typography>
-                              {`Old: ${field.value.old}, New: ${field.value.new}, Report: ${field.value.report}`}
+                              {/* {`Old: ${field.value.old}, New: ${field.value.new}, Report: ${field.value.report}`} */}
                               {/* visit time is not set */}
                             </Typography>
                           )}
